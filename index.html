@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="verification-container" class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="text-center">
+            <h2 class="animate__animated animate__bounce">Verificación de Navegador</h2>
+            <p class="animate__animated animate__fadeIn">Seguridad: Backtracked</p>
+        </div>
+    </div>
+
+    <div id="login-container" class="container d-flex justify-content-center align-items-center vh-100" style="display:none;">
+        <div class="card animate__animated animate__fadeInDown">
+            <div class="card-body">
+                <h2 class="card-title">Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <input type="text" id="login-username" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="login-password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                <button id="register-btn" class="btn btn-secondary btn-block">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-container" class="container d-flex justify-content-center align-items-center vh-100" style="display:none;">
+        <div class="card animate__animated animate__fadeInDown">
+            <div class="card-body">
+                <h2 class="card-title">Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <input type="text" id="register-username" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="register-password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="register-email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="container" style="display:none;">
+        <div id="user-info" class="d-flex justify-content-between align-items-center mb-4">
+            <span id="user-name" class="h4"></span>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="menu-icon.png" alt="Menu" id="menu-icon" class="menu-icon">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" id="add-domain">Add Domain with Protection</a>
+                </div>
+            </div>
+        </div>
+        <div id="plans" class="mb-4">
+            <h3>Plans</h3>
+            <ul class="list-group">
+                <li class="list-group-item">BASIC PLAN - Ant-DDoS 1Tbps - Panel Yes - $3/m</li>
+            </ul>
+        </div>
+        <div id="admin-panel" class="mb-4" style="display:none;">
+            <h3>Admin Panel</h3>
+            <ul id="user-accounts" class="list-group">
+                <!-- User accounts will be listed here -->
+            </ul>
+            <button id="give-plan-btn" class="btn btn-primary mt-2">Give Plan</button>
+            <button id="give-coins-btn" class="btn btn-primary mt-2">Give Coins</button>
+        </div>
+        <div id="server-panel">
+            <h3>Server Panel</h3>
+            <div class="form-group">
+                <input type="text" id="server-domain" class="form-control" placeholder="Enter Domain">
+            </div>
+            <button id="add-server-btn" class="btn btn-primary">Add Server</button>
+            <div id="server-controls" class="mt-4" style="display:none;">
+                <button id="server-on-btn" class="btn btn-success">On</button>
+                <button id="server-off-btn" class="btn btn-danger">Off</button>
+                <div id="server-monitor" class="mt-2">
+                    <p>Monitoring...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
