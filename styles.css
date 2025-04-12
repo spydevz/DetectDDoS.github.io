@@ -1,0 +1,32 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    width: 100%;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+#server-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#server-monitor {
+    flex-grow: 1;
+    margin-left: 10px;
+}
